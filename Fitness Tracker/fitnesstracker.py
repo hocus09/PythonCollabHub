@@ -8,7 +8,7 @@ class FitnessTracker:
     def view_activities(self):
         for index, entry in enumerate(self.activities, start=1):
             print(f"{index}. Activity: {entry['activity']}, Duration: {entry['duration']} minutes")
-    
+
     def total_duration(self):
         total = sum(entry["duration"] for entry in self.activities)
         print(f"Total Duration: {total} minutes")
@@ -23,15 +23,15 @@ def main():
         print("4. Quit")
         choice = input("Select an option: ")
 
-        if choice == 1:  
+        if choice == '1':
             activity = input("Enter the activity: ")
-            duration = int(input("Enter the duration in minutes: ")
-            tracker.add_activity(activity, duration)  
+            duration = int(input("Enter the duration in minutes: "))
+            tracker.add_activity(activity, duration)
         elif choice == '2':
             print("\nList of Activities:")
-            tracker.view_activity() 
+            tracker.view_activities()
         elif choice == '3':
-            total_duration()  
+            tracker.total_duration()
         elif choice == '4':
             print("Goodbye!")
             break
