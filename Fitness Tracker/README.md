@@ -1,4 +1,4 @@
-Certainly! Here's a simple `README.md` template for your fitness tracker program:
+
 
 ```markdown
 # Fitness Tracker
